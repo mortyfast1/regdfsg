@@ -19,7 +19,7 @@ pub fn version() -> Version {
     unsafe {
         if VERSION == Version::Unknown {
             let someshit = CString::new("\\").unwrap();
-            let filename = CString::new("samp.dll").unwrap();
+            let filename = CString::new("revision_samp.dll").unwrap();
             let filename_ptr = filename.as_ptr() as *const i8;
             let size = GetFileVersionInfoSizeA(filename_ptr, 0 as *mut _);
 
